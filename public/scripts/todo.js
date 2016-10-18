@@ -1,3 +1,8 @@
+// var data = [  
+//   {key: 0, text: 'Buy milk', status: 'completed'}, 
+//   {key: 1, text: 'Call Caron back', status: ''},
+//   {key: 2, text: 'Mow the lawn', status: ''} 
+// ];
 
 var TodoContainer = React.createClass({
   getInitialState: function() {
@@ -48,13 +53,6 @@ var TodoContainer = React.createClass({
     // clear input box
     this.setState({text: ''});
   },
-  toggleCompleted: function(id) {
-    if (this.state.status === 'completed') {
-      this.setState({status: 'incomplete'});
-    } else {
-      this.setState({status: 'completed'});
-    }
-  },
   removeTodoItem: function(index) {
     this.state.data.splice(index, 1);
 
@@ -68,7 +66,7 @@ var TodoContainer = React.createClass({
   render: function() {
     var todoItems = this.state.data.map(function(object, i) {
       return (
-        <TodoItem text={object.text} status={object.status} delete={this.removeTodoItem} toggleCompleted={this.toggleCompleted} key={object.id} index={i} id={object.id} />
+        <TodoItem text={object.text} status={object.status} delete={this.removeTodoItem} key={object.id} index={i} />
       );
     }, this);
     return (
@@ -96,9 +94,16 @@ var TodoItem = React.createClass({
   getInitialState: function() {
     return { status: this.props.status };
   },
+  toggleCompleted: function() {
+    if (this.state.status === 'completed') {
+      this.setState({status: 'incomplete'});
+    } else {
+      this.setState({status: 'completed'});
+    }    
+  },
   render: function() {
     return (
-      <li className={this.state.status + ' noselect todoItem'} onClick={this.toggleCompleted.bind(null, this.props.id)}>
+      <li className={this.state.status + ' noselect todoItem'} onClick={this.toggleCompleted}>
         {this.props.text}
         <div className="right" onClick={this.props.delete.bind(null, this.props.index)}>delete</div>
       </li>

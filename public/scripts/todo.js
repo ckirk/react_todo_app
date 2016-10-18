@@ -1,8 +1,3 @@
-// var data = [  
-//   {key: 0, text: 'Buy milk', status: 'completed'}, 
-//   {key: 1, text: 'Call Caron back', status: ''},
-//   {key: 2, text: 'Mow the lawn', status: ''} 
-// ];
 
 var TodoContainer = React.createClass({
   getInitialState: function() {

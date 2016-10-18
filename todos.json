@@ -1,10 +1,17 @@
 [
     {
         "id": 1388534400000,
-        "text": "Do Laundry"
+        "text": "Do Laundry",
+        "status": "completed"
     },
     {
         "id": 1388534400001,
-        "text": "Brush teeth"
+        "text": "Buy milk",
+        "status": ""
+    },
+    {
+        "id": 1388534400002,
+        "text": "Mow the lawn",
+        "status": ""
     }
 ]

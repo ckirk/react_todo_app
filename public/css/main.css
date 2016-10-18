@@ -1,0 +1,116 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+  font-size: 12px;
+  margin: 0 2px;
+  padding: 0 5px;
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+  margin: 0 0 5px;
+  padding: 0;
+}
+
+.todoContainer {
+  /*background-color: lightcoral;*/
+  background: linear-gradient(135deg, lightcoral 0%,#ffc2b0 100%);
+  width: 500px;
+  padding: 10px;
+  color: #fff;;
+}
+
+input[type="text"] {
+  font-size: 1.5em;
+  padding: 5px 10px;
+  margin-right: 10px;
+  width: 100%;
+}
+
+::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+input[type="submit"] {
+  display: none;
+}
+
+.todoItem {
+  font-size: 1.5em;
+  cursor: pointer;
+  padding-left: 5px;
+  border-radius: 4px;
+}
+
+.todoItem:hover .right {
+  display: inline-block;
+}
+
+.todoItem:hover {
+  /*background-color: #f78888;*/
+}
+
+.todoItem.completed {
+  text-decoration: line-through;
+  color: #f9cbcb;
+}
+
+.todoItem.completed .right {
+  color: #fff;
+}
+
+.right {
+  display: inline-block;
+  float: right;
+  font-size: .7em;
+  font-weight: 100;
+  margin-right: 5px;
+  border: 1px solid;
+  padding: 0 10px;
+  border-radius: 4px;
+  display: none;
+  margin-top: 5px;
+}
+
+.right:hover {
+  /*background-color: #fff;*/
+  /*color: lightcoral;*/
+  /*font-weight: 300;*/
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}

@@ -37,7 +37,7 @@ var TodoContainer = React.createClass({
     }, this);
     return (
       <div className="todoContainer">
-        <h1>My Todo List</h1>
+        <h1>{this.props.title}</h1>
         <form onSubmit={this.addTodoItem}>
           <input
             type="text"
@@ -78,6 +78,8 @@ var TodoItem = React.createClass({
 });
 
 ReactDOM.render(
-  <TodoContainer data={data} />,
+  <div>
+    <TodoContainer title="Activatr Todo List" data={data} />
+  </div>,
   document.getElementById('content')
 );
